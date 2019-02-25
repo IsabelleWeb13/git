@@ -1,0 +1,9 @@
+Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
+    'Désactive l'évènement
+    Application.EnableEvents = False
+    'modification dans la cellule A1
+    Sheets(1).Range("A1") = Sheets(1).Range("A1") + 1
+    'Réactive l'évènement
+    Application.EnableEvents = True
+End Sub
+
